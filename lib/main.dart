@@ -10,14 +10,42 @@ void main() {
 
       );
   var img =Image.network("https://c.tenor.com/8AqUPOC5GMgAAAAi/parrot-party.gif");
-  var appBody = Row(
-    children: const<Widget> [
-      Expanded(child: Text('OwO',textAlign: TextAlign.center, style: TextStyle(color: Colors.pink),),),
-      Expanded(child: Text('>w<',textAlign: TextAlign.center,style: TextStyle(color: Colors.purple),),),
-      Expanded(child: FittedBox(
-        fit: BoxFit.contain,
-        child: FlutterLogo(),
-      )
+  var appBody = GridView.count(
+    primary: false,
+    padding: const EdgeInsets.all(20),
+    crossAxisSpacing: 10,
+    mainAxisSpacing: 10,
+    crossAxisCount: 2,
+    children: <Widget>[
+      Container(
+        padding: const EdgeInsets.all(8),
+        child: img,
+        color: Colors.teal[100],
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        child: const Text('Heed not the rabble'),
+        color: Colors.teal[200],
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        child: const Text('Sound of screams but the'),
+        color: Colors.teal[300],
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        child:img,
+        color: Colors.teal[400],
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        child: img,
+        color: Colors.teal[500],
+      ),
+      Container(
+        padding: const EdgeInsets.all(8),
+        child: const Text('Revolution, they...'),
+        color: Colors.teal[600],
       ),
     ],
   );
